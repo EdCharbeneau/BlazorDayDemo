@@ -15,7 +15,8 @@ namespace BlazorDay.Services
             // Generate random data
             var i = 0;
             A.Configure<LogItem>()
-                .Fill(c => c.Id, () => { return i++; });
+                .Fill(li => li.Id, () => { return i++; })
+                .Fill(li => li.Message).AsLoremIpsumSentences(1);
 
             LogItems = A.ListOf<LogItem>();
         }
