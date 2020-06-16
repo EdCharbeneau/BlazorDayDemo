@@ -1,0 +1,11 @@
+﻿@page "/"
+@inject BlazorDay.Services.LoggerService logs
+
+<ul>
+
+    @foreach (var item in logs.LogItems)
+    {
+        <li>@item.Id - @item.Message : @item.Level</li>
+    }
+
+</ul>
