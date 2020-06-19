@@ -1,11 +1,38 @@
 ﻿@page "/"
+@using BlazorDay.Components
+@using Microsoft.Extensions.Logging
 @inject BlazorDay.Services.LoggerService logs
 
-<ul>
+<AlertBox CssClass="alert-secondary">
+    <h2>
+        <span>Count: </span>
+        <span class="badge badge-secondary">
+            @logs.LogItems.Count()
+        </span>
+    </h2>
+</AlertBox>
 
-    @foreach (var item in logs.LogItems)
+<AlertList Items="logs.LogItems" OnDelete="DeleteItem" CssMap="CssMap" DisabledMap="@(item => item.Id == 5)">
+    <ItemTemplate Context="log">
+        <div>
+            <h2>Id: @log.Id</h2>
+            <p>@log.Message</p>
+        </div>
+    </ItemTemplate>
+</AlertList>
+
+@code {
+    void DeleteItem(object item)
     {
-        <li>@item.Id - @item.Message : @item.Level</li>
+        logs.LogItems.Remove((LogItem)item);
     }
 
-</ul>
+    string CssMap(LogItem item) =>
+      item.Level switch
+      {
+          LogLevel.Warning => "alert-warning",
+          LogLevel.Critical => "alert-danger",
+          LogLevel.Error => "alert-danger",
+          _ => "alert-info"
+      };
+}
