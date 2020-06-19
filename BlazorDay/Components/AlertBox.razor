@@ -1,4 +1,9 @@
-﻿<div class="alert @CssClass @DisabledClass" disabled="@Disabled">
+﻿<!--
+   BlazorComponentUtilities requires the following package
+   https://www.nuget.org/packages/BlazorComponentUtilities/
+-->
+@using BlazorComponentUtilities
+<div @attributes="AdditionalAttributes" class="@CssClass" disabled="@Disabled">
     @ChildContent
 </div>
 
@@ -6,9 +11,15 @@
 
     [Parameter] public bool Disabled { get; set; }
 
-    string DisabledClass => Disabled ? "alert-dark" : "";
-
     [Parameter] public RenderFragment ChildContent { get; set; }
 
-    [Parameter] public string CssClass { get; set; } = "alert-danger";
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object> AdditionalAttributes { get; set; } = new Dictionary<string, Object>() { { "class", "alert-danger" } };
+
+    CssBuilder CssClass => new CssBuilder("alert")
+        .AddClass("alert-dark", when: Disabled)
+        .AddClassFromAttributes(AdditionalAttributes);
 }
+
+
+

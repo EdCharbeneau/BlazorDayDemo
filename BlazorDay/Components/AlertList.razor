@@ -2,7 +2,7 @@
 
 @foreach (var item in Items)
 {
-    <AlertBox CssClass="@CssMap(item)" Disabled="@DisabledMap(item)">
+    <AlertBox class="@CssMap(item)" Disabled="@DisabledMap(item)">
         @if (OnDelete.HasDelegate)
         {
             <button disabled="@DisabledMap(item)" @onclick="@(_ => HandleDelete(item))" type="button" class="close" data-dismiss="alert" aria-label="Close">
