@@ -1,9 +1,10 @@
 ﻿@page "/"
-@inject BlazorDay.Services.LoggerService logs
+
+@inject BlazorArtisan.Services.LoggerService logs
 
 @logs.LogItems.Count()
 
-<AlertList Items="logs.LogItems" Context="log" 
+<AlertList Items="logs.LogItems" Context="log"
            OnDelete="@((LogItem e) => DeleteItem(e))" CssMap="CssMap">
     <ItemTemplate>
         <div>
@@ -14,12 +15,12 @@
 </AlertList>
 
 @code {
-    
+
     void DeleteItem(LogItem item)
     {
         logs.LogItems.Remove((LogItem)item);
     }
-   
+
     string CssMap(LogItem item) =>
       item.Level switch
       {

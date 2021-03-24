@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorDay", "BlazorDay\BlazorDay.csproj", "{F33DDC89-2F90-462B-9006-2AB9683FE39A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorArtisan.Net5", "BlazorArtisan.Net5\BlazorArtisan.Net5.csproj", "{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F33DDC89-2F90-462B-9006-2AB9683FE39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F33DDC89-2F90-462B-9006-2AB9683FE39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F33DDC89-2F90-462B-9006-2AB9683FE39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F33DDC89-2F90-462B-9006-2AB9683FE39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
