@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32314.265
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorArtisan.Net5", "BlazorArtisan.Net5\BlazorArtisan.Net5.csproj", "{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorComponentArtisan", "BlazorComponentArtisan\BlazorComponentArtisan.csproj", "{CB254F3F-A217-4825-8C8E-63FE94FBD3B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA641EBD-4CCA-4EEC-B24D-30AC8A5CFFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB254F3F-A217-4825-8C8E-63FE94FBD3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB254F3F-A217-4825-8C8E-63FE94FBD3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB254F3F-A217-4825-8C8E-63FE94FBD3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB254F3F-A217-4825-8C8E-63FE94FBD3B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

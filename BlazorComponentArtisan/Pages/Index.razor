@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<AlertBox Disabled="true">
+    <h1>Log Count @Logs.LogItems.Count</h1>
+</AlertBox>
+
+<AlertList Items="Logs.LogItems" Context="log" TItem="LogItem" OnDelete="DeleteItem"
+           CssMap="CssMap">
+    <ItemTemplate>
+        <div>
+            <h2>Id: @log.Id</h2>
+            <p>@log.Message</p>
+        </div>
+    </ItemTemplate>
+</AlertList>

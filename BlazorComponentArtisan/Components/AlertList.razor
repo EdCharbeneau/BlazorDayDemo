@@ -1,0 +1,46 @@
+﻿@typeparam TItem
+
+@if (Items is null)
+{
+    <span>No items to display.</span>
+}
+else
+{
+    @foreach (var item in Items)
+    {
+        <AlertBox class="@CssMap(item)">
+            @if (OnDelete.HasDelegate)
+            {
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+                        @onclick="@(_ => HandleDelete(item))">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            }
+            @if (ItemTemplate is null)
+            {
+                <span>@item</span>
+            }
+            else
+            {
+                @ItemTemplate(item)
+            }
+        </AlertBox>
+    }
+}
+
+@code {
+    [Parameter]
+    public RenderFragment<TItem>? ItemTemplate { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<TItem>? Items { get; set; }
+
+    [Parameter]
+    public EventCallback<TItem> OnDelete { get; set; }
+
+    void HandleDelete(TItem item) => OnDelete.InvokeAsync(item);
+
+    [Parameter]
+    public Func<TItem, string> CssMap { get; set; } = _ => "alert-danger";
+
+}
